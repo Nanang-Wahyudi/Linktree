@@ -25,12 +25,45 @@ body {
 
 #profilePicture, #profilePicture img {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: block;
     margin: 40px auto 20px;
     border-radius: 50%;
+    box-shadow: 5px 3px 5px 3px white;
     -webkit-tap-highlight-color: transparent;
+}
+
+#profilePicture,
+#profilePicture .box a {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
+
+    25% {
+        top: 5px;
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        top: 10px;
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        top: 5px;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        top: 0;
+        animation-timing-function: ease-out;
+    }
 }
 
 #userName {
